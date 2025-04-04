@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Personal Portfolio Website HTML CSS Only </title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    :root {
+      --primary: #1e1e2f;
+      --accent: #4f46e5;
+      --bg: #f9f9f9;
+      --text: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    logo {
+    position: relative;
+    font-size:25px;
+    color: white;
+    text-decoration:none;
+    font-weight:600;
+ }
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+
+}
+
+  /*------Navbar section-----*/
+.navbar a {
+     font-size: 18px;
+     color: white;
+     text-decoration: none;
+     font-weight:  500px;
+     margin-left: 35px;
+     transition-duration: 3s;
+}
+.navbar a:hover, 
+.navbar a.active{
+    color: rgb(29, 128, 221);
+}
+
+    /*----Home section----*/
+.home{
+    display: flex;
+    background: url('hostelme.jpg') no repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    align-items: center;
+    padding:0 10%;
+}
+
+.home-content{
+    background: #1e1e2f;
+    width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(29, 128, 221);
+}
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p{
+    position: relative;
+    font-size:18px;
+    margin: 20px, 0px,40px , 0px;
+
+}
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6;
+}
+.home-content btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 50px;
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2s;
+}
+
+/*-----Button box ----*/
+.btn-box a {
+    position: relative;
+    font-size: 20px;
+    color: beige;
+    font-weight:600px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: rgb(29, 74, 119);
+    border-color: rgb(29, 128, 163);
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover{
+    color: rgb(29, 128, 221);
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: rgb(29, 128, 221);
+}
+
+.btn-box a:nth-child(2):hover{
+    color: rgb(31, 16, 16);
+}
+
+.btn-box a:nth-child(2)::before{
+    background:rgb(29, 128, 221) ;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+
+.home-sci{
+    position:absolute ;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.home sci a {
+    position: relative;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(29, 128, 221);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(29, 128, 163);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover{
+    color: rgb(31, 16, 16);
+
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(29, 128, 221);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home sci a:hover::before{
+    width: 100%;
+}
+
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right:30px ;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover.1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+    
+}
+
+.home-imgHover:hover{
+    background: rgb(31, 16, 16);
+    opacity: .8;
+}
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 16, 16);
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes showRight {
+    100%{
+        width:0;
+    }
+} 
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}
+ </style>
+
+   
+    
+  </style>
+</head>
+<body>
+    <header class="header" >
+        <a href="#" class="logo"> Mwabili.</h1>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About </a>
+            <a href="#">Portfolio </a>
+            <a href="#">Services </a>
+            <a href="#">Contact </a>
+        </nav>
+    </header>
+<!----Home section--->
+    <section class="Home">
+        <div class="home-content">
+            <h1>Jambo! I'm Ian Mwabili</h1>
+            <h3>I'm a Front end Developer </h3>
+            <p>
+                I design and build elegant websites that depic the story and nature of the individuals /organisational needs with experience
+                 in mastering full stack web tools that make me able to turn ideas into real world products 
+            </p>
+            <div class="btn-box">
+                <a href="#">Lets talk </a>
+                <a href="#">Hire me</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
