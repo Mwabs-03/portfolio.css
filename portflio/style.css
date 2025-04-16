@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather'serif;
+
+}
+
+body{
+    color: white;
+    cursor: pointer;
+
+    
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px,10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    z-index: 100% ;
+
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    padding:0 10%;
+    
+}
+
+.logo::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+
+}
+.navbar a{
+    font-size :18px; 
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+} 
+.navbar a:hover {
+    color: rgb(25,164,189);    
+}
+
+.navbar a.active{
+    color: rgb(25,164,189);
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding:0 10%;
+    background-image:url(1.png) ;
+    background-position: center ;
+    background-size: cover ;
+    
+}
+
+.home-content{
+    max-width: 600px;
+
+}
+.home-content h1{
+    position: relative;
+    font-size :56px;
+    font-weight: 600;
+    
+}
+
+.home-content h1::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation:showRight 1s ease forwards ;
+    animation-delay: 1s;}
+
+.home-content h3{
+    position: relative;
+    font-size:30px ;
+    font-weight: 600;
+    color:rgb(25,164,189) ;
+
+}
+
+.home-content h3::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation:showRight 1s ease forwards;
+    animation-delay:1.3s;}
+
+.home-content p{
+    position: relative;
+    font-size: 18px;
+    margin: 20px 0 40px 0 ;
+
+}
+
+.home-content p::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation: showRight 1s ease forwards;
+    animation-delay:1.6s;}
+
+.btn-box{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 50px;
+}
+.btn-box::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation: showRight 1s ease forwards;
+    animation-delay:1.9s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    background-color: rgb(25,164,189);
+    border:2px solid rgb(25,164,189);
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600 ;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+.btn-box a:hover{
+    background-color: rgb(25,164,189);
+}
+
+.btn-box a:nth-child(2){
+    background-color: transparent;
+    color: white;
+
+
+}
+.btn-box a:nth-child(2)::before{
+    background-color: rgb(25,164,189);
+    
+}
+.btn-box a:nth-child(2):hover{
+    background-color: rgb(10,29,55);
+}
+
+.btn-box a:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgb(10,29,55);
+    z-index: -1;
+    transition: .5s;
+
+}
+.btn-box a:hover::before{
+    width:100%;
+}
+
+.home-handle{
+    position: absolute;
+    bottom: 40px;
+    width:170px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.home-handle::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation: showRight 1s ease forwards;
+    animation-delay:2.5s;
+    z-index: 2;
+}
+
+.home-handle a{
+    display: inline-flex;
+    font-size: 25px;
+    color: rgb(25,164,189);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid rgb(25,164,189);
+    border-radius:50% ;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: .5s;
+    overflow: hidden;
+    
+}
+
+.home-handle a:hover{
+    color: white;
+
+}
+
+.home-handle a::before{
+    content: '';
+    position: absolute;
+    width:0 ;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(25,164,189);
+    transition: .5s;
+}
+
+.home-handle a:hover::before{
+    width: 100%;
+}
+.home-imghover{
+    position: absolute;
+    top:0;
+    right:1px;
+    width:520px;
+    height:100%;
+    background:transparent;
+    transition:3s;
+    animation: manipActiveHover  .1s ease forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+    
+}
+
+.home-imghover::after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5, 10, 48);
+    animation: showRight 1s ease forwards;
+    animation-delay:3s;
+    z-index: 2;
+    
+}
+
+.home-imghover:hover{
+    background-color: rgb(5, 10, 48);
+    opacity: 0.8;
+
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+@keyframes manipActivehover{
+    100%{
+        pointer-events:auto;
+    }
+}
